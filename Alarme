@@ -1,0 +1,23 @@
+// C++ code
+//
+
+void setup()
+{
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT); //define os leds como saída
+  pinMode(6, OUTPUT);//define o sino como saída
+
+
+}
+
+void loop()
+{
+  digitalWrite(13, HIGH);
+  digitalWrite(12, LOW);
+  tone(6,350);//indica a saída, define a frequência
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(13, LOW);
+  digitalWrite(12, HIGH);
+  noTone(6);//deixa silencio, indica a saída
+  delay(1000); // Wait for 1000 millisecond(s)
+}
